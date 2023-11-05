@@ -23,6 +23,11 @@ const mentorList = {
 ...mentor2
 }
 
+const friendList = (...friends:string[])=> {
+    friends.forEach((friend: string) => console.log(`Hi ${friend}`))
+}
+friendList('alam', 'balam', 'kalam', 'Dalam')
+
 
 
 
