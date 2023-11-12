@@ -11,6 +11,7 @@
     
     
       };
+      const student2 = addCourseToStudent({emni: "emni"})
     
       const student1 = addCourseToStudent<{id: number; name: string}>({id: 123456, name: "Bangladesh"})
 
