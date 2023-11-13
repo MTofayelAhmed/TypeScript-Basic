@@ -14,4 +14,9 @@
     plane: string;
     ship: string;
   };
+
+  type checkVehicle<T> = T extends keyof Sheik ? true : false ;
+
+
+  type hasTractor = checkVehicle<"bike">
 }
