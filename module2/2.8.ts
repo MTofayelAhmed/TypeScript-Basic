@@ -1,7 +1,13 @@
 {
   // promise
 
-  const createPromise = (): Promise<string>  => {
+  const getData = async () => {
+    const data = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const resData = await data.json();
+    return resData;
+  };
+
+  const createPromise = (): Promise<string> => {
     return new Promise<string>((resolve, reject) => {
       const data: string = "something";
 
@@ -13,21 +19,12 @@
     });
   };
 
-//   create function
+  //   create function
 
-const resolveData = async ()=> {
-    const data = await createPromise()
-    return data 
-}
+  const resolveData = async (): Promise<string> => {
+    const data: string = await createPromise();
+    return data;
+  };
 
-resolveData()
-
-
-
-
-
-
-
-
-
+  resolveData();
 }
