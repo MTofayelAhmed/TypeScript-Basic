@@ -6,3 +6,4 @@ let anything : any
 anything = "Next level web Development";
 
 (anything as string)
+
