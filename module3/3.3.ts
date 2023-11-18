@@ -38,7 +38,16 @@ const getUser = (user: AdminUser | NormalUser)=>{
 }
 
 
+const normalUser : NormalUser = {
+    name: "Mr. Normal Bhai"
+}
 
+const adminUser : AdminUser = {
+    name : "Mr. Admin Bhai",
+    role: "admin"
+}
+
+getUser(adminUser)
 
 
 
