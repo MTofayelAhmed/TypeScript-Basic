@@ -2,21 +2,28 @@
   class BankAccount {
     readonly id: number;
     public name: string;
-    private balance: number;
+    protected _balance: number;
 
     constructor(id: number, name: string, balance: number) {
       this.id = id;
       this.name = name;
-      this.balance = balance;
+      this._balance = balance;
     }
     addDeposit(amount: number) {
-      this.balance = this.balance + amount;
+      this._balance = this._balance + amount;
     }
 
     myBalance() {
-      return this.balance;
+      return this._balance;
     }
   }
+
+
+  class StudentAccount extends BankAccount {
+    test(){
+        this._balance
+    }
+  } 
 
   const goribAccount = new BankAccount(123, "Tofayel", 220);
 
