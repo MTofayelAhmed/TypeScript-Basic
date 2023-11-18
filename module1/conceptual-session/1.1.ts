@@ -18,6 +18,7 @@
 
 
 
-function  getPropertyFromArray (){
-    
+function  getPropertyFromArray<T, K extends keyof T > (array: T[] , key: K){
+    return array[key]
+
 }
